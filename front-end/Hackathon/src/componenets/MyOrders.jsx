@@ -7,7 +7,7 @@ const MyOrders = () => {
 
   const fetchOrders = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/my-orders/${userId}`);
+      const res = await axios.get(`https://hackathon-backend-5oqz.onrender.com/my-orders/${userId}`);
       setOrders(res.data);
     } catch (err) {
       console.error('Error fetching orders:', err);
@@ -19,7 +19,7 @@ const MyOrders = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:3000/delete-order/${orderId}`);
+      await axios.delete(`https://hackathon-backend-5oqz.onrender.com/delete-order/${orderId}`);
       alert("Order deleted successfully.");
       fetchOrders();
     } catch (err) {
