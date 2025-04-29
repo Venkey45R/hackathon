@@ -24,7 +24,7 @@ const ProductList = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/products");
+        const res = await axios.get("https://hackathon-backend-5oqz.onrender.com/products");
         setProducts(res.data);
       } catch (error) {
         console.error("Error fetching products:", error.message);
