@@ -20,7 +20,7 @@ function FarmerOrder() {
 
   const updateStatus = async (orderId, status) => {
     try {
-      await axios.patch(`http://localhost:3000/order/${orderId}/status`, { status });
+      await axios.patch(`https://hackathon-backend-5oqz.onrender.com/order/${orderId}/status`, { status });
       fetchOrders(); // Refresh orders after update
     } catch (error) {
       console.error("Error updating order status:", error);
