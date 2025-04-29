@@ -15,7 +15,7 @@ function UpdateForm() {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/product/${id}`)
+    axios.get(`https://hackathon-backend-5oqz.onrender.com/product/${id}`)
       .then((res) => {
         setProduct(res.data);
       })
@@ -32,7 +32,7 @@ function UpdateForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/update-product/${id}`, product);
+      await axios.put(`https://hackathon-backend-5oqz.onrender.com/update-product/${id}`, product);
       alert("Product updated successfully!");
       navigate('/update-products');
     } catch (err) {
