@@ -8,7 +8,7 @@ function UpdateProducts() {
 
   useEffect(() => {
     const id = localStorage.getItem('id');
-    axios.get(`http://localhost:3000/farmer-products/${id}`)
+    axios.get(`https://hackathon-backend-5oqz.onrender.com/farmer-products/${id}`)
       .then((res) => {
         setProducts(res.data);
       })
