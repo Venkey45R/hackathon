@@ -13,7 +13,7 @@ function OrderForm() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/products/${id}`);
+        const res = await axios.get(`https://hackathon-backend-5oqz.onrender.com/products/${id}`);
         setProduct(res.data);
       } catch (err) {
         console.error("Error fetching product", err);
@@ -39,7 +39,7 @@ function OrderForm() {
   
     try {
       const token = localStorage.getItem("access_token"); // Make sure token exists
-      const response = await axios.post("http://localhost:3000/orders", orderData, {
+      const response = await axios.post("https://hackathon-backend-5oqz.onrender.com/orders", orderData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
