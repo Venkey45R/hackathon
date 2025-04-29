@@ -29,7 +29,7 @@ export default function UploadProduct() {
     // 👇 Fetch farmer data to get location
     const fetchFarmer = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/farmer/${farmerId}`);
+        const res = await axios.get(`https://hackathon-backend-5oqz.onrender.com/farmer/${farmerId}`);
         setLocation(res.data.location);
       } catch (err) {
         console.error("Error fetching farmer info:", err);
@@ -57,7 +57,7 @@ export default function UploadProduct() {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/upload", {
+      const res = await fetch("https://hackathon-backend-5oqz.onrender.com/upload", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...formData, farmerId, location }) // 👈 include location
