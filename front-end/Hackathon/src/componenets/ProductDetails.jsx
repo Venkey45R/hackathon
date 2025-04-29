@@ -10,7 +10,7 @@ function ProductDetails() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/products/${id}`);
+        const res = await axios.get(`https://hackathon-backend-5oqz.onrender.com/products/${id}`);
         setProduct(res.data);
       } catch (err) {
         console.error("Error fetching product details", err);
