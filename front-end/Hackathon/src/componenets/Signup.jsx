@@ -27,7 +27,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/signup", user);
+      const res = await axios.post("https://hackathon-backend-5oqz.onrender.com/signup", user);
       if (res.status === 201) {
         showAlert("Signup successful! Please log in.", "success");
         setTimeout(() => navigate("/signin"), 1500);
