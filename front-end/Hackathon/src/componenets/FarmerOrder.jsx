@@ -11,7 +11,7 @@ function FarmerOrder() {
 
   const fetchOrders = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/farmer-orders/${farmerId}`);
+      const res = await axios.get(`https://hackathon-backend-5oqz.onrender.com/farmer-orders/${farmerId}`);
       setOrders(res.data);
     } catch (error) {
       console.error("Error fetching farmer orders:", error);
