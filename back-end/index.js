@@ -20,7 +20,7 @@ app.use(express.json());
 
 const port = process.env.PORT || 3000;
 
-mongoose.connect("mongodb://localhost:27017/dma");
+mongoose.connect(process.env.MONGODB_URI);
 
 app.post('/signup', async (req, res) => {
   try {
