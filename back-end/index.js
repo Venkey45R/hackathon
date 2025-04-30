@@ -14,18 +14,36 @@ const sendCustomerMail = require('./mail_customer');
 
 const app = express();
 
-
-app.use(cors());
 app.use(express.json());
 
 const port = process.env.PORT || 3000;
 
-mongoose.connect(process.env.MONGODB_URI);
+const allowedOrigins = ['http://localhost:5173/signup', 'https://hackathon-frontend-u098.onrender.com'];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
+
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log('MongoDB connected'))
+  .catch((err) => console.error('MongoDB connection error:', err));
 
 app.post('/signup', async (req, res) => {
   try {
     const { name, email, password, role, contact, location } = req.body;
-
+    console.log(req.body);
     const exist = await userModel.findOne({ email });
     if (exist) {
       return res.status(400).json("User already exists");
@@ -58,6 +76,7 @@ app.post('/signup', async (req, res) => {
     res.status(500).json("Internal server error");
   }
 });
+
 
 app.get('/my-orders', authenticateToken, async (req, res) => {
   try {
