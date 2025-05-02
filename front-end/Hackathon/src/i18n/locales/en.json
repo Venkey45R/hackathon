@@ -1,0 +1,45 @@
+{
+    "view_products": "View Products",
+    "view_orders": "View Orders",
+    "logout": "Logout",
+    "welcome_customer": "Welcome to AgriDirect!",
+    "customer_description": "Explore farm-fresh products, manage your orders, and support your local farmers — all in one place.",
+    "farmer": "Farmer",
+    "upload_product": "Upload Product",
+    "update_products": "Update Products",
+    "welcome_farmer": "Welcome Back, Farmer 🌾",
+    "farmer_description": "Ready to sell your fresh produce directly to customers? Use AgriDirect to manage everything in one place.",
+    "sign_in": "Sign In",
+    "sign_up": "Sign Up",
+    "home_title": "Grow Together with AgriDirect",
+    "home_subtitle": "Connect directly with farmers for fresh produce and fair prices. Empower agriculture — one click at a time.",
+    "explore_products": "Explore Products",
+    "app": {
+    "title": "AgriDirect"
+  },
+  "nav": {
+    "signin": "Sign In",
+    "signup": "Sign Up"
+  },
+  "home": {
+    "heroTitle": "Grow Together with AgriDirect",
+    "heroDescription": "Connect directly with farmers for fresh produce and fair prices. Empower agriculture — one click at a time.",
+    "cta": "Explore Products"
+  },
+  "features": {
+    "title": "Features",
+    "uploadTitle": "Farmer Product Upload",
+    "uploadDesc": "Farmers can add fresh produce details with ease — including name, quantity, and price.",
+    "orderTitle": "Customer Orders",
+    "orderDesc": "Customers can browse all products and place orders. No payment needed — just order!",
+    "historyTitle": "Order History",
+    "historyDesc": "Track all orders placed or received from the user’s and farmer’s orders page."
+  },
+  "cta": {
+    "title": "Get Started Today!",
+    "description": "Whether you're a farmer or customer, join AgriDirect to simplify selling and buying fresh products.",
+    "contact": "Contact Us",
+    "query": "For queries, email us"
+  }
+  }
+  
