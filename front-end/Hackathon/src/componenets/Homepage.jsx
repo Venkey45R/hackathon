@@ -11,6 +11,7 @@ export default function Home() {
       {/* Navbar */}
       <nav className="fixed top-0 z-50 flex items-center justify-between w-full px-6 py-4 bg-white shadow-md">
         <h1 className="text-2xl font-bold text-green-700">{t('app.title')}</h1>
+        <LanguageSwitcher />
         <div className="space-x-10">
           <Link to="/signin">
             <button className="px-5 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700">
@@ -23,7 +24,6 @@ export default function Home() {
             </button>
           </Link>
         </div>
-        <LanguageSwitcher />
       </nav>
 
       <section className="flex flex-col-reverse items-center justify-between min-h-screen px-6 py-20 bg-green-100 md:flex-row">
